@@ -18,7 +18,7 @@ export default function StatsSection() {
           </div>
         </FadeIn>
 
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {statsData.map((stat, index) => (
             <FadeIn key={index} delay={index * 0.1}>
               <div className="bg-[#F7F3E9] border border-[#2F5D50]/10 rounded-3xl p-8 text-center hover:-translate-y-2 transition duration-300">

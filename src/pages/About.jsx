@@ -2,6 +2,8 @@ import Hero from "../components/ui/hero"
 import AboutStory from "../sections/About/AboutStory"
 import StatsSection from "../sections/About/Stats"
 import { images } from "../assets/Images"
+import ExperienceSection from "../sections/About/Experience"
+import CoreStrengthsSection from "../Data/Strength"
 export default function About() {
     return (
         <div>
@@ -13,6 +15,8 @@ export default function About() {
             />
             <AboutStory/>
             <StatsSection/>
+            <ExperienceSection/>
+            <CoreStrengthsSection/>
         </div>
     )
 }

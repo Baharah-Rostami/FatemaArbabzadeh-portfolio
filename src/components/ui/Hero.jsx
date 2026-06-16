@@ -1,5 +1,5 @@
 import { GiSparkles } from "react-icons/gi";
-
+import { Link } from "react-router-dom";
 export default function Hero({ badge, title, subtitle, image }) {
   return (
     <section className="relative overflow-hidden bg-linear-to-br from-[#F7F3E9] via-[#F5F0E4] to-[#E9E0D1] py-16 md:py-24 lg:py-28">
@@ -31,13 +31,19 @@ export default function Hero({ badge, title, subtitle, image }) {
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-            <button className="px-6 py-3 rounded-xl bg-[#2F5D50] text-white hover:scale-105 transition">
+            <Link
+              to="/projects"
+              className="px-6 py-3 rounded-xl bg-[#2F5D50] text-white hover:scale-105 transition inline-block text-center"
+            >
               View Projects
-            </button>
+            </Link>
 
-            <button className="px-6 py-3 rounded-xl border border-[#2F5D50] text-[#2F5D50] hover:bg-[#2F5D50] hover:text-white transition">
+            <Link
+              to="/contact"
+              className="px-6 py-3 rounded-xl border border-[#2F5D50] text-[#2F5D50] hover:bg-[#2F5D50] hover:text-white transition inline-block text-center"
+            >
               Contact Me
-            </button>
+            </Link>
           </div>
         </div>
 
@@ -48,7 +54,7 @@ export default function Hero({ badge, title, subtitle, image }) {
           <div className="w-64 sm:w-72 md:w-80 aspect-3/4 bg-[#7A9D7E]/30 rounded-2xl rotate-6 shadow-lg" />
 
           {/* Front Card */}
-          <div className="absolute -top-4 -left-4 w-64 sm:w-72 md:w-80 aspect-3/4 rounded-2xl shadow-xl -rotate-6 overflow-hidden bg-white">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 lg:-top-4 lg:-left-4 lg:translate-x-0 w-64 sm:w-72 md:w-80 aspect-3/4 rounded-2xl shadow-xl lg:-rotate-6 overflow-hidden bg-white">
 
             {image ? (
               <img

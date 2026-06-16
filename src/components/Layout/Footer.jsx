@@ -1,25 +1,7 @@
-import { useState } from "react";
-import { FaLeaf, FaPaperPlane } from "react-icons/fa";
+import { FaLeaf, FaLinkedin, FaEnvelope, FaPhone } from "react-icons/fa";
 
 export default function Footer() {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
   const year = new Date().getFullYear();
-
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(form);
-    alert("Message sent successfully!");
-    setForm({ name: "", email: "", message: "" });
-  };
 
   return (
     <footer className="relative bg-[#2F5D50] text-white overflow-hidden">
@@ -30,7 +12,7 @@ export default function Footer() {
         <div className="absolute bottom-10 right-10 w-72 h-72 bg-[#8B6B4A]/20 rounded-full blur-3xl" />
       </div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-20 grid md:grid-cols-2 gap-12">
+      <div className="relative z-10 max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-12">
 
         {/* LEFT INFO */}
         <div>
@@ -43,59 +25,52 @@ export default function Footer() {
             Creative graphic designer focused on branding, visual identity, and illustration.
             Let’s build something meaningful together.
           </p>
-
         </div>
 
-        {/* CONTACT FORM */}
+        {/* RIGHT CONTACT */}
         <div>
-          <h3 className="text-xl font-semibold mb-6">Contact Me</h3>
+          <h3 className="text-xl font-semibold mb-6">Contact</h3>
 
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <div className="space-y-4 text-white/80">
 
-            <input
-              type="text"
-              name="name"
-              placeholder="Your Name"
-              value={form.name}
-              onChange={handleChange}
-              className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 placeholder-white/60 outline-none focus:border-white"
-            />
-
-            <input
-              type="email"
-              name="email"
-              placeholder="Your Email"
-              value={form.email}
-              onChange={handleChange}
-              className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 placeholder-white/60 outline-none focus:border-white"
-            />
-
-            <textarea
-              name="message"
-              placeholder="Your Message"
-              rows="4"
-              value={form.message}
-              onChange={handleChange}
-              className="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 placeholder-white/60 outline-none focus:border-white"
-            />
-
-            <button
-              type="submit"
-              className="flex items-center justify-center gap-2 w-full py-3 rounded-xl bg-white text-[#2F5D50] font-semibold hover:scale-105 transition"
+            {/* Email */}
+            <a
+              href="mailto:fatema.email@example.com"
+              className="flex items-center gap-3 hover:text-white transition"
             >
-              <FaPaperPlane />
-              Send Message
-            </button>
-          </form>
+              <FaEnvelope />
+              <span>fatema.email@example.com</span>
+            </a>
+
+            {/* Phone */}
+            <a
+              href="tel:+937XXXXXXXX"
+              className="flex items-center gap-3 hover:text-white transition"
+            >
+              <FaPhone />
+              <span>+93 7XX XXX XXX</span>
+            </a>
+
+            {/* LinkedIn */}
+            <a
+              href="https://www.linkedin.com/in/fatema-arbabzada-540794393"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 hover:text-white transition"
+            >
+              <FaLinkedin />
+              <span>LinkedIn Profile</span>
+            </a>
+
+          </div>
         </div>
 
       </div>
 
       <div className="border-t border-white/10 py-4 text-center text-white/50 text-sm">
-        <p className="text-white/50 text-sm">
-            © {year} Author : Baharah Rostami | All rights reserved.
-          </p>
+        © {year} Author: Baharah Rostami | All rights reserved.
       </div>
+
     </footer>
   );
 }
