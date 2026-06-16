@@ -2,7 +2,7 @@ import { GiSparkles } from "react-icons/gi";
 
 export default function Hero({ badge, title, subtitle, image }) {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-[#F7F3E9] via-[#F5F0E4] to-[#E9E0D1] py-16 md:py-24 lg:py-28">
+    <section className="relative overflow-hidden bg-linear-to-br from-[#F7F3E9] via-[#F5F0E4] to-[#E9E0D1] py-16 md:py-24 lg:py-28">
 
       {/* Background */}
       <div className="absolute inset-0">
@@ -30,7 +30,6 @@ export default function Hero({ badge, title, subtitle, image }) {
             {subtitle}
           </p>
 
-          {/* Buttons */}
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <button className="px-6 py-3 rounded-xl bg-[#2F5D50] text-white hover:scale-105 transition">
               View Projects
@@ -42,14 +41,14 @@ export default function Hero({ badge, title, subtitle, image }) {
           </div>
         </div>
 
-        {/* RIGHT IMAGE (REUSABLE) */}
+        {/* RIGHT IMAGE */}
         <div className="relative flex justify-center mt-10 lg:mt-0">
 
-          {/* Back card */}
-          <div className="w-64 sm:w-72 md:w-80 aspect-[3/4] bg-[#7A9D7E]/30 rounded-2xl rotate-6 shadow-lg" />
+          {/* Back Card */}
+          <div className="w-64 sm:w-72 md:w-80 aspect-3/4 bg-[#7A9D7E]/30 rounded-2xl rotate-6 shadow-lg" />
 
-          {/* Front card (IMAGE HERE) */}
-          <div className="absolute -top-4 -left-4 w-64 sm:w-72 md:w-80 aspect-[3/4] rounded-2xl shadow-xl -rotate-6 overflow-hidden bg-white">
+          {/* Front Card */}
+          <div className="absolute -top-4 -left-4 w-64 sm:w-72 md:w-80 aspect-3/4 rounded-2xl shadow-xl -rotate-6 overflow-hidden bg-white">
 
             {image ? (
               <img
@@ -63,8 +62,7 @@ export default function Hero({ badge, title, subtitle, image }) {
               </div>
             )}
 
-            {/* overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent" />
+            <div className="absolute inset-0 bg-linear-to-t from-black/10 to-transparent" />
           </div>
 
         </div>

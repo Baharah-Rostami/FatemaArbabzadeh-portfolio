@@ -1,4 +1,4 @@
-import { FaPalette, FaLaptopCode, FaPrint, FaPenNib } from "react-icons/fa";
+import { FaPalette, FaLaptopCode, FaPrint, FaPenNib, FaBrush } from "react-icons/fa";
 import { MdOutlinePermMedia } from "react-icons/md";
 import { Link } from "react-router-dom";
 const skills = [
@@ -15,8 +15,8 @@ const skills = [
         title: "Print Design",
     },
     {
-        icon: FaLaptopCode,
-        title: "UI/UX Design",
+        icon: FaBrush,
+        title: "Canva ",
     },
     {
         icon: FaPenNib,
