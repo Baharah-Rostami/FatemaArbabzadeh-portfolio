@@ -14,9 +14,8 @@ export default function Navbar() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 bg-[#F7F3E9]/90 backdrop-blur-md border-b border-[#D8CBB8]">
-
-      <nav className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <header className="fixed top-5 left-1/2 -translate-x-1/2 z-50">
+      <nav className=" bg-white/80 backdrop-blur-xl border border-white/30 rounded-full px-8 h-16 shadow-xl flex items-center justify-between gap-10">
 
         {/* LOGO */}
         <Link to="/" className="flex items-center gap-3">
@@ -40,10 +39,9 @@ export default function Navbar() {
               <NavLink
                 to={link.path}
                 className={({ isActive }) =>
-                  `relative font-medium transition ${
-                    isActive
-                      ? "text-[#2F5D50]"
-                      : "text-[#3E3228] hover:text-[#2F5D50]"
+                  `relative font-medium transition ${isActive
+                    ? "text-[#2F5D50]"
+                    : "text-[#3E3228] hover:text-[#2F5D50]"
                   }`
                 }
               >
@@ -51,9 +49,8 @@ export default function Navbar() {
                   <>
                     {link.name}
                     <span
-                      className={`absolute left-0 -bottom-2 h-0.5 bg-[#8B6B4A] transition-all ${
-                        isActive ? "w-full" : "w-0"
-                      }`}
+                      className={`absolute left-0 -bottom-2 h-0.5 bg-[#8B6B4A] transition-all ${isActive ? "w-full" : "w-0"
+                        }`}
                     />
                   </>
                 )}
@@ -89,8 +86,7 @@ export default function Navbar() {
               to={link.path}
               onClick={() => setMenuOpen(false)}
               className={({ isActive }) =>
-                `block text-lg font-medium ${
-                  isActive ? "text-[#2F5D50]" : "text-[#3E3228]"
+                `block text-lg font-medium ${isActive ? "text-[#2F5D50]" : "text-[#3E3228]"
                 }`
               }
             >
@@ -100,10 +96,9 @@ export default function Navbar() {
 
           <Link
             to="/contact"
-            onClick={() => setMenuOpen(false)}
-            className="block text-center mt-4 px-5 py-3 rounded-full bg-[#2F5D50] text-[#F7F3E9]"
+            className="hidden md:flex items-center px-4 py-1.5 text-sm font-medium rounded-full border border-[#2F5D50] text-[#2F5D50] hover:bg-[#2F5D50] hover:text-white transition-all duration-300"
           >
-            Let's Talk
+            connect
           </Link>
         </div>
       )}
