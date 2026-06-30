@@ -17,7 +17,7 @@ export default function SkillsPage() {
   return (
     <>
   
-       <div className="min-h-screen bg-linear-to-br from-[#F7F3E9] via-[#F5F0E4] to-[#E9E0D1] py-16 px-6">
+       <div className="min-h-screen bg-linear-to-br from-[#F7F3E9] via-[#F5F0E4] to-[#E9E0D1] py-24 px-6">
 
       {/* Header */}
       <div className="text-center mb-12">
